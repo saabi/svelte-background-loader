@@ -1,4 +1,4 @@
-# sapper-background-loader
+# svelte-background-loader
 This is a WIP component testing a potential approach towards loading and fully rendering 
 components in the background prior to displaying them live.
 
