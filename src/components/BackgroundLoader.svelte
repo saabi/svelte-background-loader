@@ -20,7 +20,8 @@
             const body = doc.body;
 
             let observer = new MutationObserver(async function(mutations) {
-                if (loaded) return;
+                if (loaded) 
+                    return;
                 let promisses = []
                 mutations.forEach(function(mutation) {
                     for (var i = 0; i < mutation.addedNodes.length; i++) {
@@ -65,7 +66,10 @@
 
 <iframe bind:this={iframe} title='' style='display:none'></iframe>
 {#if !loaded}
-<slot/>
+    <slot/>
+    {#if ready}
+    <p>Loading component...</p>
+    {/if}
 {:else}
-<div bind:this={container} />
+    <div bind:this={container} />
 {/if}
