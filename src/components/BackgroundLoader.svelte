@@ -71,11 +71,11 @@
 </script>
 
 <div bind:this={buffer} style='display:none' />
-{#if loading}
-    <p>Loading and prerendering next component...</p>
-{/if}
 {#if !loaded}
     <slot/>
 {:else}
     <div bind:this={container} />
+{/if}
+{#if loading}
+    <p>Loading and prerendering next component...</p>
 {/if}
